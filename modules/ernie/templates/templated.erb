@@ -1,0 +1,13 @@
+test template
+name: <%= @name %>
+host: <%= @host %>
+fqdn: <%= @fqdn %>
+
+<% if fqdn != "domU-12-31-39-0E-AA-DA.compute-1.internal" %>        
+replSet=replset1
+<% end %>
+
+
+<% scope.to_hash.keys.each do |k| -%>
+<%= k %>
+<% end -%>
